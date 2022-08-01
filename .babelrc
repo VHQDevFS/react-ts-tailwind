@@ -1,0 +1,38 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          // "@src": "./src",
+          "@assets": "./src/assets",
+          "@components": "./src/components",
+          "@configs": "./src/configs",
+          "@hooks": "./src/hooks",
+          "@libs": "./src/libs",
+          "@pages": "./src/pages",
+          "@queries": "./src/queries",
+          "@routes": "./src/routes",
+          "@utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}
