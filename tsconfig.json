@@ -36,7 +36,7 @@
       "@libs/*": ["./src/libs/*"],
       "@models/*": ["src/models/*"],
       "@pages/*": ["./src/pages/*"],
-      "@queries/*": ["./src/queries/*"],
+      "@reactQuery/*": ["./src/reactQuery/*"],
       "@routes/*": ["./src/routes/*"],
       "@utils/*": ["./src/utils/*"]
     }

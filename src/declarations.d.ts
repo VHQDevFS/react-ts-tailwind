@@ -52,7 +52,13 @@ declare module '*.svg' {
   // const ReactComponent: React.SFC<React.SVGProps<SVGSVGElement>>
   // export default ReactComponent
 
-  const content: React.ElementType<React.ComponentPropsWithRef<'svg'>>;
+  interface ISvg extends React.ComponentPropsWithRef<'svg'> {
+    width: string | number;
+    height: string | number;
+    fill?: string | 'current' | 'currentColor'; // color: ;
+  }
+
+  const content: React.ElementType<ISvg & { title?: string }>;
   export default content;
 }
 
@@ -74,4 +80,10 @@ declare module '*.module.sass' {
 declare module '*.module.less' {
   const classes: { readonly [key: string]: string };
   export default classes;
+}
+
+declare namespace NodeJS {
+  interface Process extends NodeJS.Process {
+    browser?: string;
+  }
 }

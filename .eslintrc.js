@@ -56,6 +56,39 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-empty-interface': 'warn',
+    '@typescript-eslint/no-explicit-any': [
+      'off',
+      {
+        fixToUnknown: false,
+        ignoreRestArgs: true,
+      },
+    ],
+    'eslint-comments/disable-enable-pair': 'off',
+    'no-plusplus': 'off',
+    'no-useless-escape': 'off',
+    'no-void': 0,
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/function-component-definition': [
+      0,
+      {
+        namedComponents: 'function-declaration',
+      },
+    ],
+    'node/no-missing-import': 'off',
+    'node/no-extraneous-import': 'off',
+    'node/no-unsupported-features/es-syntax': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'import/no-unresolved': ['off', { caseSensitive: false }],
+    'import/prefer-default-export': 'off',
     'import/order': [
       'error',
       {
@@ -86,28 +119,6 @@ module.exports = {
       },
     ],
     'import/newline-after-import': 1,
-    'no-void': 0,
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
-    'react/function-component-definition': [
-      0,
-      {
-        namedComponents: 'function-declaration',
-      },
-    ],
-    'node/no-unsupported-features/es-syntax': ['error', { ignores: ['modules'] }],
-    'node/no-missing-import': 'off',
-    'node/no-extraneous-import': 'off',
-    'import/no-unresolved': ['off', { caseSensitive: false }],
   },
   // overrides: [
   //   {
